@@ -4,25 +4,24 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![Opacus](https://img.shields.io/badge/Opacus-1.4+-green.svg)](https://opacus.ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://img.shields.io/badge/DOI-10.1000/xyz-blue.svg)](https://doi.org/10.1000/xyz)
 
-## 🧠 Abstract
+##  Abstract
 
-This project implements a comprehensive simulation of differentially private federated learning on the MNIST dataset. The system demonstrates how federated learning can be enhanced with differential privacy guarantees while maintaining model performance. We compare centralized training, federated learning without privacy, and federated learning with differential privacy, analyzing the privacy-utility tradeoff and communication efficiency across 5 clients.
+This project implements a comprehensive simulation of differentially private federated learning on the MNIST dataset. The system demonstrates how federated learning can be enhanced with differential privacy guarantees while maintaining model performance. We compare centralized training, federated learning without privacy, and federated learning with differential privacy, analyzing the privacy utility tradeoff and communication efficiency across 5 clients.
 
 **Keywords**: Federated Learning, Differential Privacy, MNIST, Opacus, Privacy-Preserving Machine Learning
 
-## 🎯 Problem Statement
+##  Problem Statement
 
-Traditional machine learning approaches require centralized data collection, which raises significant privacy concerns and regulatory challenges. Federated learning enables collaborative model training without sharing raw data, but it still faces privacy risks from model inversion attacks and membership inference. Differential privacy provides formal privacy guarantees by adding calibrated noise to model updates, creating a robust framework for privacy-preserving distributed learning.
+Traditional machine learning approaches require centralized data collection, which raises significant privacy concerns and regulatory challenges. Federated learning enables collaborative model training without sharing raw data, but it still faces privacy risks from model inversion attacks and membership inference. Differential privacy provides formal privacy guarantees by adding calibrated noise to model updates, creating a robust framework for privacy preserving distributed learning.
 
-**Real-world Impact**: This research addresses critical challenges in healthcare, finance, and mobile computing where data privacy is paramount. The MNIST simulation provides a foundation for understanding privacy-utility tradeoffs in real-world federated learning deployments.
+**Real world Impact**: This research addresses critical challenges in healthcare, finance, and mobile computing where data privacy is paramount. The MNIST simulation provides a foundation for understanding privacy utility tradeoffs in real world federated learning deployments.
 
 **References**: 
 - [Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629)
 - [Deep Learning with Differential Privacy](https://arxiv.org/abs/1607.00133)
 
-## 📊 Dataset Description
+## Dataset Description
 
 **MNIST Dataset**: The Modified National Institute of Standards and Technology database contains 70,000 handwritten digit images (0-9) in grayscale format.
 
@@ -37,7 +36,7 @@ Traditional machine learning approaches require centralized data collection, whi
 - **IID**: Random uniform distribution across clients
 - **Non-IID**: Dirichlet distribution (α=0.5) for realistic heterogeneity
 
-## 🧪 Methodology
+##  Methodology
 
 ### Neural Network Architecture
 ```
@@ -73,7 +72,7 @@ Linear(10) → Softmax
 - **Privacy-Utility Tradeoff**: Systematic analysis of noise impact
 - **Communication Metrics**: Round timing and efficiency analysis
 
-## 📈 Results
+##  Results
 
 ### Performance Comparison
 
@@ -90,13 +89,12 @@ Linear(10) → Softmax
 - **Scalability**: Linear scaling with number of clients
 
 ### Privacy-Utility Tradeoff Analysis
-![Privacy-Utility Tradeoff](./visualizations/privacy_utility_tradeoff.png)
 
 - **Correlation**: Strong negative correlation (r = -0.89) between noise and accuracy
 - **Optimal Point**: ε = 8.76 provides good privacy-utility balance
 - **Threshold**: ε < 5.0 causes significant performance degradation
 
-## 🧠 Explainability / Interpretability
+##  Explainability / Interpretability
 
 ### SHAP Analysis
 Our SHAP analysis reveals that the model focuses on digit-specific features:
@@ -110,9 +108,9 @@ Our SHAP analysis reveals that the model focuses on digit-specific features:
 - **Privacy Preservation**: Explanations maintain privacy guarantees
 
 ### Clinical/Scientific Relevance
-The interpretability analysis demonstrates that federated learning with differential privacy maintains model transparency while protecting individual privacy—crucial for healthcare and scientific applications.
+The interpretability analysis demonstrates that federated learning with differential privacy maintains model transparency while protecting individual privacy crucial for healthcare and scientific applications.
 
-## ⚗️ Experiments & Evaluation
+##  Experiments & Evaluation
 
 ### Experimental Setup
 - **Hardware**: CPU training (compatible with GPU)
@@ -133,10 +131,10 @@ The interpretability analysis demonstrates that federated learning with differen
 - **Communication Cost**: Round completion times
 - **Convergence**: Training curve analysis
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
-📦 Differentially-Private-Federated-Learning-Simulation-on-MNIST-Clients/
+ Differentially-Private-Federated-Learning-Simulation-on-MNIST-Clients/
 │
 ├── 📁 data/                   # Raw & processed datasets
 │   ├── raw/                  # Original MNIST dataset
@@ -185,7 +183,7 @@ The interpretability analysis demonstrates that federated learning with differen
 └── README.md                # This file
 ```
 
-## 💻 How to Run
+## How to Run
 
 ### Prerequisites
 ```bash
@@ -234,7 +232,7 @@ docker build -t dp-federated-learning .
 docker run -p 8501:8501 dp-federated-learning
 ```
 
-## 🧪 Unit Tests
+## Unit Tests
 
 ```bash
 # Run all tests
@@ -249,7 +247,7 @@ pytest tests/test_model_training.py -v
 
 **Test Coverage**: 85%+ coverage across core modules
 
-## 📚 References
+##  References
 
 ### Academic Papers
 1. McMahan, B., et al. (2017). "Communication-Efficient Learning of Deep Networks from Decentralized Data." *AISTATS*.
@@ -266,7 +264,7 @@ pytest tests/test_model_training.py -v
 8. PyTorch Team. (2021). "PyTorch: An Imperative Style, High-Performance Deep Learning Library." *NeurIPS*.
 9. Lundberg, S. M., & Lee, S. I. (2017). "A Unified Approach to Interpreting Model Predictions." *NeurIPS*.
 
-## ⚠️ Limitations
+##  Limitations
 
 ### Current Limitations
 - **Simulation Environment**: Real-world deployment would face network latency and client heterogeneity
@@ -285,23 +283,22 @@ pytest tests/test_model_training.py -v
 - **Data Scope**: MNIST may not represent complex real-world data distributions
 - **Privacy Assumptions**: Assumes honest-but-curious threat model
 
-## 📄 PDF Report
+##  PDF Report
 
 [📄 Download Full Research Report](./report/DP_Federated_Learning_Report.pdf)
 
 *Comprehensive technical report including detailed methodology, extended results, and theoretical analysis.*
 
-## 🧠 Contribution & Acknowledgements
+##  Contribution & Acknowledgements
 
 ### Team Contributions
-- **Research Design**: Privacy-utility tradeoff analysis framework
+- **Research Design**: Privacy utility tradeoff analysis framework
 - **Implementation**: Complete federated learning simulation pipeline
 - **Evaluation**: Comprehensive experimental evaluation and visualization
-- **Documentation**: Research-grade documentation and reproducibility
+- **Documentation**: Research grade documentation and reproducibility
 
 ### Acknowledgements
-- **Academic Advisors**: Prof. [Name] for guidance on differential privacy
-- **Research Group**: [Institution] Machine Learning Lab
+- **Academic Advisors**: Prof. Dr. Pardeep Kumar for guidance on differential privacy
 - **Open Source Community**: PyTorch, Opacus, and Flower development teams
 - **Dataset Providers**: MNIST dataset creators and maintainers
 
@@ -310,10 +307,9 @@ If you use this work in your research, please cite:
 ```bibtex
 @article{dp_federated_mnist_2024,
   title={Differentially Private Federated Learning Simulation on MNIST},
-  author={Research Team},
+  author={Aqib Siddiqui},
   journal={arXiv preprint},
   year={2024},
-  doi={10.1000/xyz}
 }
 ```
 
@@ -321,4 +317,4 @@ If you use this work in your research, please cite:
 
 **License**: MIT License - see [LICENSE](LICENSE) file for details.
 
-**Contact**: For questions and collaboration, please open an issue or contact the research team.
+**Contact**: For questions and collaboration, please open an issue.
