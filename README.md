@@ -305,12 +305,14 @@ pytest tests/test_model_training.py -v
 ### Citation
 If you use this work in your research, please cite:
 ```bibtex
-@article{dp_federated_mnist_2024,
+@misc{dp_federated_mnist_2024,
   title={Differentially Private Federated Learning Simulation on MNIST},
   author={Aqib Siddiqui},
-  journal={arXiv preprint},
   year={2024},
+  howpublished={\url{https://github.com/Aqib121201/DP-Federated-Learning}},
+  note={Research simulation project}
 }
+
 ```
 
 ---
