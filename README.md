@@ -283,12 +283,6 @@ pytest tests/test_model_training.py -v
 - **Data Scope**: MNIST may not represent complex real-world data distributions
 - **Privacy Assumptions**: Assumes honest-but-curious threat model
 
-##  PDF Report
-
-[📄 Download Full Research Report](./report/DP_Federated_Learning_Report.pdf)
-
-*Comprehensive technical report including detailed methodology, extended results, and theoretical analysis.*
-
 ##  Contribution & Acknowledgements
 
 ### Team Contributions
